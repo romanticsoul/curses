@@ -1,7 +1,10 @@
+import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
+
 import { ThemeProvider } from 'next-themes'
 import { cn } from '@/lib/utils'
+
 import './globals.css'
 
 const fontSans = FontSans({
@@ -23,7 +26,9 @@ export default function RootLayout({
     <html lang="ru" suppressHydrationWarning>
       <body
         className={cn(
+
           'flex min-h-screen justify-center font-sans antialiased dark:bg-[#333333] dark:text-white',
+
           fontSans.variable
         )}
       >
