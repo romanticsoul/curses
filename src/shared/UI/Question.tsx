@@ -12,7 +12,7 @@ type QuestionProps = {
 export const Question: React.FC<QuestionProps> = (props) => {
   const { question, answer, className } = props
   const [isOpen, setIsOpen] = useState<boolean>(false)
-  const accordion = useRef<HTMLDivElement>(null)
+  const accordion = useRef<HTMLParagraphElement>(null)
 
   const handleClick = () => {
     setIsOpen(!isOpen)
@@ -26,12 +26,10 @@ export const Question: React.FC<QuestionProps> = (props) => {
   }, [isOpen])
 
   return (
-    <li
-      className={clsx('bg-accordion list-none rounded-lg px-4 py-2', className)}
-    >
+    <li className={clsx('list-none', className)}>
       <button
         onClick={handleClick}
-        className="flex w-full justify-between text-3xl"
+        className="flex w-full items-center justify-between gap-2 rounded-lg bg-accordion px-4 py-2 text-3xl leading-8"
       >
         <span>{question}</span>
         {isOpen ? (
@@ -42,15 +40,15 @@ export const Question: React.FC<QuestionProps> = (props) => {
           <span className="inline-block size-8 bg-white "></span>
         )}
       </button>
-      <div
+      <p
         className={clsx(
           'box-content max-h-0 overflow-hidden p-0 opacity-0 transition-all',
-          isOpen && 'pt-4 opacity-100'
+          isOpen && 'px-4 py-2 text-textGray opacity-100'
         )}
         ref={accordion}
       >
         {answer}
-      </div>
+      </p>
     </li>
   )
 }

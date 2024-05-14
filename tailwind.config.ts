@@ -29,6 +29,7 @@ const config = {
         accordion: 'hsl(var(--accordion))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
+        textGray: 'rgba(157, 157, 157, 1)',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',

@@ -32,7 +32,7 @@
     --input: 240 5.9% 90%;
     --ring: 240 10% 3.9%;
     --accordion: 234, 100%, 95%;
-
+    --accordion-text: 0, 0%, 47%;
     --radius: 0.5rem;
   }
 
@@ -65,6 +65,7 @@
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
     --accordion: 0, 0%, 32%;
+    --accordion-text: 0, 0%, 47%;
   }
 }
 
@@ -78,5 +79,5 @@
 }
 
 /* body {
-  background: hsl(0, 0%, 32%);
+  background: hsl(0, 0%, 47%);
 } */
