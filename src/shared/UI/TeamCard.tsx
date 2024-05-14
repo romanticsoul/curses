@@ -26,7 +26,7 @@ const TeamCard: React.FC<Props> = ({
           {imgURL ? (
             <Image src={imgURL} alt="team" layout="fill" objectFit="cover" />
           ) : (
-            <div className="flex size-full items-center justify-center bg-[#EAEAEA] dark:bg-[#797979] ">
+            <div className=" bg-muted flex size-full items-center justify-center  ">
               <svg
                 width="96"
                 height="96"
@@ -45,13 +45,13 @@ const TeamCard: React.FC<Props> = ({
             {direction}
           </button>
         </div>
-        <h1 className="mt-[20px] text-[20px] text-primary dark:text-[#E3E6FF]  ">
+        <h1 className="mt-[20px] text-[20px] text-secondary-foreground ">
           {name}
         </h1>
         <p className=" mt-[12px] w-full text-[16px] ">{description}</p>
       </div>
       <Link
-        className=" flex items-center gap-2 text-[#797979] dark:text-[#9D9D9D]"
+        className=" flex items-center gap-2 text-muted-foreground "
         href={link}
       >
         <p>Подробнее </p>

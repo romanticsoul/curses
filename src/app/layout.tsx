@@ -4,8 +4,8 @@ import { Inter as FontSans } from 'next/font/google'
 
 import { ThemeProvider } from 'next-themes'
 
-
 import './globals.css'
+import Header from '@/widgets/Header'
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -26,8 +26,7 @@ export default function RootLayout({
     <html lang="ru" suppressHydrationWarning>
       <body
         className={cn(
-
-          'flex min-h-screen justify-center font-sans antialiased dark:bg-[#333333] dark:text-white',
+          'flex min-h-screen justify-center font-sans antialiased ',
 
           fontSans.variable
         )}
@@ -38,7 +37,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Header />
+          <div className="mt-[90px] ">{children}</div>
         </ThemeProvider>
       </body>
     </html>
