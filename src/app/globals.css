@@ -16,6 +16,8 @@
 
     --primary: #2e43ff;
     --primary-foreground: #ffffff;
+    --primary-hover: #0000d9;
+    --primary-active: #bcc3ff;
 
     --secondary: #e5e8ff;
     --secondary-foreground: #162069;
@@ -29,7 +31,7 @@
     --border: #c9c9c9;
     --input: #e4e4e7;
 
-    --radius: 0.5rem;
+    --radius: 16px;
   }
 
   .dark {
@@ -45,6 +47,8 @@
 
     --primary: #bdc3ff;
     --primary-foreground: #162069;
+    --primary-hover: #e3e6ff;
+    --primary-active: #8995ff;
 
     --secondary: #525252;
     --secondary-foreground: #e5e8ff;
