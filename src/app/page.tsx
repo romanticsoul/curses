@@ -1,9 +1,13 @@
-import CourseCard from '@/shared/UI/CourseCard'
+
+import TeamCard from '@/shared/TeamCard'
+import ToggleThemeButton from '@/shared/toggle-theme-button'
+import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className=" min-h-screen ">
-      <CourseCard title={'Название'} description="описание" />
+    <main className=" flex h-screen w-screen items-center justify-center ">
+      <ToggleThemeButton />
+
     </main>
   )
 }
