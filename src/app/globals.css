@@ -28,6 +28,8 @@
 
     --border: #c9c9c9;
     --input: #e4e4e7;
+    --accordion: #e5e8ff;
+    --accordion-text: #787878;
 
     --radius: 0.5rem;
   }
@@ -57,6 +59,7 @@
 
     --border: #797979;
     --input: #27272a;
+    --accordion: #525252;
   }
 }
 

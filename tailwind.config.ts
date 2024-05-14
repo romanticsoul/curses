@@ -28,6 +28,8 @@ const config = {
         ring: 'var(--ring)',
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+        accordion: 'var(--accordion)',
+        textGray: 'rgb(157, 157, 157)',
         primary: {
           DEFAULT: 'var(--primary)',
           foreground: 'var(--primary-foreground)',
