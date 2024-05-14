@@ -1,5 +1,5 @@
 import TeamCard from '@/shared/TeamCard'
-import ToggleThemeButton from '@/shared/toggle-theme-button'
+import ToggleThemeButton from '@/shared/ToggleThemeButton'
 import Image from 'next/image'
 
 export default function Home() {
