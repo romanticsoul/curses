@@ -1,6 +1,6 @@
+import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
-import { cn } from '@/lib/utils'
 import './globals.css'
 
 const fontSans = FontSans({
@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          'flex min-h-screen justify-center font-sans antialiased',
+          ' min-h-screen  font-sans antialiased',
           fontSans.variable
         )}
       >
