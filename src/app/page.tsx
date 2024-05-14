@@ -1,3 +1,11 @@
+import TeamCard from '@/shared/TeamCard'
+import ToggleThemeButton from '@/shared/toggle-theme-button'
+import Image from 'next/image'
+
 export default function Home() {
-  return <main className="min-h-screen  p-24"></main>
+  return (
+    <main className="flex h-screen w-screen items-center justify-center ">
+      <ToggleThemeButton />
+    </main>
+  )
 }
