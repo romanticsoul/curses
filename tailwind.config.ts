@@ -19,6 +19,10 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        'course-overview': "url('/img/assets/course-overview.png')",
+        'main-overview': "url('/img/assets/main-overview.png')",
+      },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
       },
