@@ -24,7 +24,6 @@ const config = {
       },
       colors: {
         border: 'var(--border)',
-        input: 'var(--input)',
         ring: 'var(--ring)',
         background: 'var(--background)',
         foreground: 'var(--foreground)',
@@ -59,6 +58,10 @@ const config = {
           DEFAULT: 'var(--card)',
           foreground: 'var(--card-foreground)',
           hover: 'var(--card-hover)',
+        },
+        input: {
+          DEFAULT: 'var(--input)',
+          hover: 'var(--input-hover)',
         },
       },
       borderRadius: {

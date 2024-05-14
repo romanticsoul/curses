@@ -30,6 +30,7 @@
 
     --border: #c9c9c9;
     --input: #e4e4e7;
+    --input-hover: #797979;
 
     --radius: 16px;
   }
@@ -61,6 +62,8 @@
 
     --border: #797979;
     --input: #27272a;
+    --input-hover: #c9c9c9;
+
     --accordion: #525252;
   }
 }
