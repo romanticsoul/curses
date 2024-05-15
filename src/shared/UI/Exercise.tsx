@@ -6,7 +6,7 @@ import { MouseEventHandler, useRef, useState } from 'react'
 type ExerciseProps = {
   id: number
   title: string
-  time: number
+  time?: number
   type: 'video' | 'article' | 'practice'
   completed: boolean
   changeCompleted?: () => void
@@ -84,9 +84,11 @@ export const ExerciseLesson: React.FC<ExerciseProps> = ({
           </span>
         }
       </div>
-      <div className="grow">
+      <div className="flex grow flex-col justify-center">
         <div className="leading-5">{`Задание ${id}. ${title}`}</div>
-        <div className="mt-2 text-muted-foreground">{`${time} мин`}</div>
+        {time && (
+          <div className="mt-2 text-muted-foreground">{`${time} мин`}</div>
+        )}
       </div>
       <div className="mt-1">
         <input
