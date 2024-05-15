@@ -5,7 +5,7 @@ import { Inter as FontSans } from 'next/font/google'
 import { ThemeProvider } from 'next-themes'
 
 import './globals.css'
-import Header from '@/widgets/Header'
+import Header from '@/widgets/Header/Header'
 
 const fontSans = FontSans({
   subsets: ['latin'],
