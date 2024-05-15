@@ -1,11 +1,14 @@
-import TeamCard from '@/shared/UI/TeamCard'
+
 import ToggleThemeButton from '@/shared/ToggleThemeButton'
-import Image from 'next/image'
+import CourseOverview from '@/widgets/CourseOverview'
+import MainOverview from '@/widgets/MainOverview'
 
 export default function Home() {
   return (
-    <main className="flex size-full items-center justify-center  ">
+    <main className="min-h-screen w-screen">
       <ToggleThemeButton />
+      <CourseOverview />
+      <MainOverview />
     </main>
   )
 }

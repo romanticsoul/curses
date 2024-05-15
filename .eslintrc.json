@@ -12,7 +12,12 @@
   ],
   "settings": {
     "tailwindcss": {
-      "callees": ["classnames", "clsx", "ctl", "tw", "twMerge", "cn", "cva"]
+      "callees": ["classnames", "clsx", "ctl", "tw", "twMerge", "cn", "cva"],
+      "whitelist": [
+        "material-symbols-outlined",
+        "material-symbols-rounded",
+        "material-symbols-sharp"
+      ]
     }
   }
 }

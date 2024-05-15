@@ -1,8 +1,11 @@
-import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
+import { cn } from '@/lib/utils'
 
 import { ThemeProvider } from 'next-themes'
+
+
+import 'material-symbols'
 
 import './globals.css'
 import Header from '@/widgets/Header/Header'
@@ -26,8 +29,7 @@ export default function RootLayout({
     <html lang="ru" suppressHydrationWarning>
       <body
         className={cn(
-          'flex min-h-screen justify-center font-sans antialiased ',
-
+          'flex min-h-screen justify-center font-sans antialiased',
           fontSans.variable
         )}
       >

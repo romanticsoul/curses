@@ -24,6 +24,7 @@ export default function ToggleThemeButton() {
         />
       </svg>
       <span className="sr-only">Toggle theme</span>
+
     </button>
   )
 }
