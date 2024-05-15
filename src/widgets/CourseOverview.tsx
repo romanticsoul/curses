@@ -1,14 +1,10 @@
 import React from 'react'
 
 import { Button } from '@/shared/Button'
-import courseOverview from '../../public/assets/course-overview.png'
 
 const CourseOverview = () => {
   return (
-    <section
-      className="course-overview bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url({${courseOverview}})` }}
-    >
+    <section className="bg-[url('/assets/course-overview.png')] bg-cover bg-center bg-no-repeat">
       <div className="m-auto max-w-[1516px] px-[15px] pb-[197px] pt-[102px]">
         <div className="max-w-[748px]">
           <span className=" text-[16px] font-medium leading-[16px]">

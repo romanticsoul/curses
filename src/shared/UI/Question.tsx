@@ -29,7 +29,7 @@ export const Question: React.FC<QuestionProps> = (props) => {
     <li className={clsx('list-none', className)}>
       <button
         onClick={handleClick}
-        className=" flex w-full items-center justify-between gap-2 rounded-lg bg-secondary px-4 py-2 text-3xl leading-8"
+        className="flex w-full items-center justify-between gap-2 rounded-lg bg-secondary px-4 py-2 text-3xl leading-8"
       >
         <span>{question}</span>
         {isOpen ? (
