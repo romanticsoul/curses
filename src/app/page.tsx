@@ -1,3 +1,4 @@
+import { ExerciseLesson } from '@/shared/UI/Exercise'
 import Benefit from '@/widgets/Benefit'
 import MainOverview from '@/widgets/MainOverview'
 
