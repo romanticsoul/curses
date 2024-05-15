@@ -1,3 +1,4 @@
+
 import ToggleThemeButton from '@/shared/ToggleThemeButton'
 import CourseOverview from '@/widgets/CourseOverview'
 import MainOverview from '@/widgets/MainOverview'

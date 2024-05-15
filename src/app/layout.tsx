@@ -4,8 +4,11 @@ import { cn } from '@/lib/utils'
 
 import { ThemeProvider } from 'next-themes'
 
+
 import 'material-symbols'
+
 import './globals.css'
+import Header from '@/widgets/Header/Header'
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -36,7 +39,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Header />
+          <div className="mt-[90px] ">{children}</div>
         </ThemeProvider>
       </body>
     </html>
