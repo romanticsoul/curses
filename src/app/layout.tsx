@@ -8,6 +8,7 @@ import 'material-symbols'
 
 import Header from '@/widgets/Header/Header'
 import './globals.css'
+import Footer from '@/widgets/Footer'
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -40,6 +41,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
