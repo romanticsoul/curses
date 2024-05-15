@@ -31,8 +31,10 @@
     --destructive-foreground: #fafafa;
 
     --border: #c9c9c9;
-    --input: #e4e4e7;
+
+    --input: var(--border);
     --input-hover: #797979;
+    --input-focus: #bcc3ff;
 
     --radius: 16px;
   }
@@ -65,8 +67,10 @@
     --destructive-foreground: #fafafa;
 
     --border: #797979;
-    --input: #27272a;
+
+    --input: var(--border);
     --input-hover: #c9c9c9;
+    --input-focus: #bcc3ff;
 
     --accordion: #525252;
   }

@@ -16,9 +16,9 @@ const CourseCard: React.FC<ICourseCard> = ({ title, description }) => {
   //   setButtonProp('Вы участник')
   // }
   return (
-    <li className="relative h-[287px] max-w-[287px] list-none rounded-2xl border-2 border-[#E3E6FF] bg-background duration-[0.7s] before:absolute before:block before:size-full before:bg-[url('/background/cardLine.png')] before:bg-center before:bg-no-repeat hover:bg-[#F5F5F5]">
+    <li className="relative h-[287px] max-w-[287px] list-none rounded-2xl border-2 border-secondary bg-card duration-500 before:absolute before:block before:size-full before:bg-[url('/background/cardLine.png')] before:bg-center before:bg-no-repeat hover:bg-card-hover">
       <div className="relative box-border flex size-full flex-col justify-start p-[20px]">
-        <h3 className="  mb-[12px]  box-border text-xl font-semibold leading-[20px] text-[#161F69]">
+        <h3 className="mb-[12px] box-border text-xl font-semibold leading-[20px] text-secondary-foreground">
           {title}
         </h3>
         <p className=" mb-auto text-base font-normal leading-5">
@@ -27,7 +27,7 @@ const CourseCard: React.FC<ICourseCard> = ({ title, description }) => {
         <div className=" flex flex-row gap-[16px] ">
           <Button
             variant={'outlined'}
-            className="min-w-0 flex-shrink flex-grow bg-card "
+            className="min-w-0 shrink grow bg-card "
             // onClick={Change}
           >
             {ButtonProp}
@@ -35,7 +35,7 @@ const CourseCard: React.FC<ICourseCard> = ({ title, description }) => {
           <Button
             aspect={'square'}
             variant={'outlined'}
-            className="flex-shrink-0  border-[#E3E6FF] bg-white"
+            className="shrink-0  border-secondary bg-white dark:border-primary"
           >
             <span className="material-symbols-outlined text-[#2C41FF]">
               favorite
