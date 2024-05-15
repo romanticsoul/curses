@@ -25,7 +25,10 @@ const config = {
       colors: {
         border: 'var(--border)',
         ring: 'var(--ring)',
-        background: 'var(--background)',
+        background: {
+          DEFAULT: 'var(--background)',
+          tags: 'var(--background-tags)',
+        },
         foreground: 'var(--foreground)',
         textGray: 'var(--accordion-text)',
         primary: {
