@@ -4,7 +4,7 @@ import { Button } from '@/shared/Button'
 
 const CourseOverview = () => {
   return (
-    <section className="bg-[url('/assets/course-overview.png')] bg-cover bg-center bg-no-repeat">
+    <section className="bg-[url('/assets/course-overview.png')] bg-cover bg-center bg-no-repeat text-white">
       <div className="m-auto max-w-[1516px] px-[15px] pb-[197px] pt-[102px]">
         <div className="max-w-[748px]">
           <span className=" text-[16px] font-medium leading-[16px]">

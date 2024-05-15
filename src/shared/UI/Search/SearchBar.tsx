@@ -43,7 +43,7 @@ const SearchBar = () => {
         type="text"
       />
       <AnimatePresence>
-        {active && <SearchPopover forwardRef={popoverRef} />}
+        {active && <SearchPopover ref={popoverRef} />}
       </AnimatePresence>
     </div>
   )
