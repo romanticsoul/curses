@@ -1,6 +1,8 @@
+import CourseCard from '@/shared/UI/CourseCard'
 import { ExerciseLesson } from '@/shared/UI/Exercise'
 import Benefit from '@/widgets/Benefit'
 import CourseDetails from '@/widgets/CourseDetails'
+import CourseProgram from '@/widgets/CourseProgram'
 import Courses from '@/widgets/Courses'
 import MainOverview from '@/widgets/MainOverview'
 import Questions from '@/widgets/Questions'
@@ -13,6 +15,7 @@ export default function Home() {
       <Courses />
       <Questions />
       <CourseDetails />
+      <CourseProgram />
     </main>
   )
 }
