@@ -24,7 +24,7 @@ export const links = [
 const Header = () => {
   const [isOpen, setIsOpen] = React.useState(false)
   return (
-    <header className="absolute top-0 z-20  h-[88px] w-full  bg-transparent px-12">
+    <header className="z-20 my-6 w-full space-y-4 bg-transparent  px-12">
       <div className="flex h-full items-center justify-between  gap-12">
         <button
           onClick={() => setIsOpen(true)}
