@@ -3,7 +3,7 @@ import React from 'react'
 
 const MainOverview = () => {
   return (
-    <section className="bg-[url('/assets/main-overview.png')] bg-cover bg-center bg-no-repeat">
+    <section className="bg-[url('/assets/main-overview.png')] bg-cover bg-center bg-no-repeat text-white">
       <div className="m-auto max-w-[1516px] px-[15px] pb-[116px] pt-[140px]">
         <div className="max-w-[748px]">
           <h2 className="mb-[44px] text-[96px] font-medium leading-[96px]">

@@ -1,4 +1,5 @@
-import { ComponentPropsWithRef } from 'react'
+'use client'
+import { forwardRef, type ButtonHTMLAttributes } from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/lib/utils'
 
@@ -11,6 +12,7 @@ const buttonVariants = cva(
           'bg-primary text-primary-foreground hover:bg-primary-hover active:bg-primary-active active:text-secondary-foreground',
         outlined:
           'border-2 border-primary bg-transparent text-secondary-foreground hover:bg-card-hover active:bg-primary-active active:text-secondary-foreground dark:active:bg-primary dark:active:text-primary-foreground',
+        transparent: 'bg-transparent hover:bg-card-hover',
       },
       size: {
         sm: 'h-8 rounded px-4 text-sm',
@@ -20,6 +22,7 @@ const buttonVariants = cva(
       },
       aspect: {
         square: 'aspect-square p-0',
+        circle: 'aspect-square rounded-full p-0',
       },
     },
     defaultVariants: {
@@ -29,22 +32,21 @@ const buttonVariants = cva(
   }
 )
 
-type ButtonProps = ComponentPropsWithRef<'button'> &
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof buttonVariants> & {}
 
-export const Button = ({
-  size,
-  variant,
-  aspect,
-  className,
-  ...props
-}: ButtonProps) => {
-  return (
-    <button
-      className={cn(buttonVariants({ variant, size, aspect }), className)}
-      {...props}
-    >
-      {props.children}
-    </button>
-  )
-}
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ size, variant, aspect, className, ...props }, ref) => {
+    return (
+      <button
+        ref={ref}
+        className={cn(buttonVariants({ variant, size, aspect }), className)}
+        {...props}
+      >
+        {props.children}
+      </button>
+    )
+  }
+)
+
+Button.displayName = 'Button'
