@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="ru" suppressHydrationWarning>
       <body
         className={cn(
-          'flex min-h-screen justify-center font-sans antialiased',
+          ' min-h-screen  font-sans antialiased',
           fontSans.variable
         )}
       >
@@ -37,7 +37,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <div className="mt-[90px] ">{children}</div>
+          {children}
         </ThemeProvider>
       </body>
     </html>
