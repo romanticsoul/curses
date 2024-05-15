@@ -3,6 +3,7 @@ import React, { useRef } from 'react'
 import SearchPopover from './SearchPopover'
 import { useSearch } from '@/features/useSearch'
 import { AnimatePresence } from 'framer-motion'
+import { Input } from '@/shared/Input'
 
 const SearchBar = () => {
   const { value, setValue } = useSearch()
@@ -32,11 +33,10 @@ const SearchBar = () => {
   }, [inputRef, popoverRef])
   return (
     <div className="relative w-full min-w-[300px] max-w-[900px]">
-      <input
+      <Input
         name="search"
         ref={inputRef}
         onFocus={handleInputFocus}
-        className="h-[50px] w-full rounded-[8px] border-2 border-border bg-transparent px-[20px] text-[16px] outline-none placeholder:text-border"
         placeholder="Найти курс..."
         value={value}
         onChange={(e) => setValue(e.target.value)}
