@@ -63,6 +63,9 @@ const config = {
           DEFAULT: 'var(--input)',
           hover: 'var(--input-hover)',
         },
+        benefit: {
+          DEFAULT: 'var(--benefit)',
+        },
       },
       borderRadius: {
         DEFAULT: 'calc(var(--radius) / 2)',
