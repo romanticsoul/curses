@@ -62,6 +62,7 @@ const config = {
         input: {
           DEFAULT: 'var(--input)',
           hover: 'var(--input-hover)',
+          focus: 'var(--input-focus)',
         },
         benefit: {
           DEFAULT: 'var(--benefit)',
