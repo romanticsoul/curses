@@ -5,6 +5,7 @@ import SearchBar from '@/shared/UI/Search/SearchBar'
 import Link from 'next/link'
 import React from 'react'
 import SideMenu from './SideMenu'
+import { Button } from '@/shared/Button'
 
 export const links = [
   {
@@ -26,26 +27,16 @@ const Header = () => {
   return (
     <header className="absolute top-0 z-20  h-[88px] w-full  bg-transparent px-12">
       <div className="flex h-full items-center justify-between  gap-12">
-        <button
+        <Button
+          variant="transparent"
+          aspect="square"
           onClick={() => setIsOpen(true)}
-          className="flex items-center min-[1150px]:hidden"
+          className="lg:hidden"
         >
-          <svg
-            className="fill-foreground"
-            width="26"
-            height="16"
-            viewBox="0 0 26 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M0 1C0 0.447715 0.447715 0 1 0H25C25.5523 0 26 0.447715 26 1C26 1.55228 25.5523 2 25 2H1C0.447716 2 0 1.55228 0 1ZM0 8C0 7.44772 0.447715 7 1 7H25C25.5523 7 26 7.44772 26 8C26 8.55229 25.5523 9 25 9H1C0.447716 9 0 8.55229 0 8ZM1 14C0.447715 14 0 14.4477 0 15C0 15.5523 0.447716 16 1 16H25C25.5523 16 26 15.5523 26 15C26 14.4477 25.5523 14 25 14H1Z"
-            />
-          </svg>
-        </button>
-        <div className="hidden gap-8 min-[1150px]:flex">
+          <span className="material-symbols-outlined">Menu</span>
+        </Button>
+
+        <div className="hidden gap-8 lg:flex">
           <Link href="/" className="text-[16px] font-[500] text-foreground ">
             logo
           </Link>
@@ -72,17 +63,9 @@ const Header = () => {
           <div className="hidden items-center md:flex">
             <MyEducationButton />
           </div>
-          <div className="flex items-center text-foreground ">
-            <svg
-              className="fill-foreground"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M10 21H14C14 22.1 13.1 23 12 23C10.9 23 10 22.1 10 21ZM21 19V20H3V19L5 17V11C5 7.9 7 5.2 10 4.3V4C10 2.9 10.9 2 12 2C13.1 2 14 2.9 14 4V4.3C17 5.2 19 7.9 19 11V17L21 19ZM17 11C17 8.2 14.8 6 12 6C9.2 6 7 8.2 7 11V18H17V11Z" />
-            </svg>
-          </div>
+          <Button variant="transparent" aspect="square">
+            <span className="material-symbols-outlined">Notifications</span>
+          </Button>
           <div className="hidden items-center md:flex  ">
             <svg
               width="40"

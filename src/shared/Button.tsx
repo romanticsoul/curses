@@ -22,6 +22,7 @@ const buttonVariants = cva(
       },
       aspect: {
         square: 'aspect-square p-0',
+        circle: 'aspect-square rounded-full p-0',
       },
     },
     defaultVariants: {
