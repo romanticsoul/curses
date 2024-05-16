@@ -41,7 +41,7 @@ const SwiperBlock = () => {
       <h2 className="mb-[48px] text-center text-[64px] font-medium text-benefit max-[1150px]:text-[70px] max-[767px]:text-[28px] max-[767px]:leading-7">
         Преподаватели
       </h2>
-      <div className="max-[767px]:hidden">
+      <div className={data.length < 3 ? 'hidden' : 'max-[767px]:hidden'}>
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           initialSlide={2}
@@ -73,7 +73,7 @@ const SwiperBlock = () => {
           ref={prevRef}
           aspect={'square'}
           variant={'outlined'}
-          className="absolute left-[202px] top-[50%] z-20 border-none bg-[#e3e6ff] max-[1219px]:left-[125px]"
+          className="absolute left-[207px] top-[50%] z-20 border-none bg-[#e3e6ff] max-[1219px]:left-[125px]"
         >
           <span className="material-symbols-outlined text-[#2C41FF] ">
             arrow_back_ios
@@ -83,14 +83,20 @@ const SwiperBlock = () => {
           ref={nextRef}
           aspect={'square'}
           variant={'outlined'}
-          className="absolute right-[202px] top-[50%] z-20 border-none bg-[#e3e6ff]  max-[1219px]:right-[125px]"
+          className="absolute right-[207px] top-[50%] z-20 border-none bg-[#e3e6ff]  max-[1219px]:right-[125px]"
         >
           <span className="material-symbols-outlined text-[#2C41FF]">
             arrow_forward_ios
           </span>
         </Button>
       </div>
-      <ul className="hidden flex-wrap items-center justify-center gap-[10px] max-[767px]:flex">
+      <ul
+        className={
+          data.length < 3
+            ? 'flex flex-wrap items-center justify-center gap-[20px] max-[767px]:flex max-[767px]:gap-[10px]'
+            : 'hidden flex-wrap items-center justify-center max-[767px]:flex max-[767px]:gap-[10px]'
+        }
+      >
         {data.map((d, key) => (
           <li key={key}>
             <TeamCard
