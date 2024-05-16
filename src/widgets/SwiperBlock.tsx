@@ -72,22 +72,18 @@ const SwiperBlock = () => {
         <Button
           ref={prevRef}
           aspect={'square'}
-          variant={'outlined'}
-          className="absolute left-[207px] top-[50%] z-20 border-none bg-[#e3e6ff] max-[1219px]:left-[125px]"
+          className="absolute left-[207px] top-1/2 z-20 border-none bg-secondary text-primary hover:bg-secondary dark:bg-primary dark:text-foreground max-[1219px]:left-[125px]"
         >
-          <span className="material-symbols-outlined text-[#2C41FF] ">
-            arrow_back_ios
+          <span className="material-symbols-outlined rotate-180">
+            arrow_forward_ios
           </span>
         </Button>
         <Button
           ref={nextRef}
           aspect={'square'}
-          variant={'outlined'}
-          className="absolute right-[207px] top-[50%] z-20 border-none bg-[#e3e6ff]  max-[1219px]:right-[125px]"
+          className="absolute right-[207px] top-1/2 z-20 border-none bg-secondary text-primary hover:bg-secondary dark:bg-primary dark:text-foreground max-[1219px]:right-[125px]"
         >
-          <span className="material-symbols-outlined text-[#2C41FF]">
-            arrow_forward_ios
-          </span>
+          <span className="material-symbols-outlined">arrow_forward_ios</span>
         </Button>
       </div>
       <ul

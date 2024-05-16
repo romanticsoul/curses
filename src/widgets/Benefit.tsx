@@ -18,7 +18,7 @@ const Benefit = () => {
     },
   ]
   return (
-    <section className="benefit flex items-center justify-center ">
+    <section className="flex items-center justify-center ">
       <ul className="my-[94px] flex flex-wrap items-center justify-center gap-[85px]  p-1 max-[767px]:gap-[30px]">
         {data.map((obj, key) => (
           <li key={key} className="flex flex-col items-center justify-center">

@@ -10,7 +10,7 @@ interface Props {
 }
 
 const TeamCard: React.FC<Props> = ({
-  direction = 'None',
+  direction = 'Направление',
   imgURL,
   name,
   description,
@@ -25,7 +25,7 @@ const TeamCard: React.FC<Props> = ({
           {imgURL ? (
             <Image src={imgURL} alt="team" layout="fill" objectFit="cover" />
           ) : (
-            <div className=" bg-muted flex size-full items-center justify-center  ">
+            <div className="flex size-full items-center justify-center bg-muted">
               <svg
                 width="96"
                 height="96"
@@ -52,20 +52,13 @@ const TeamCard: React.FC<Props> = ({
         </p>
       </div>
       <Link
-        className=" flex items-center gap-2 text-muted-foreground max-[767px]:text-[8px]"
+        className="flex items-center gap-2 text-muted-foreground max-[767px]:text-[8px]"
         href={link}
       >
         <p className="">Подробнее </p>
-        <svg
-          className="max-[767px]:h-[7px] max-[767px]:w-[4px]"
-          width="9"
-          height="15"
-          viewBox="0 0 9 15"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M1 1L7.5 7.5L1 14" stroke="#797979" stroke-width="1.5" />
-        </svg>
+        <span className="material-symbols-outlined text-sm">
+          arrow_forward_ios
+        </span>
       </Link>
     </div>
   )

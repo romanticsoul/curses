@@ -35,45 +35,45 @@ const CourseProgram = () => {
       completed: true,
     },
     {
-      id: 1,
+      id: 2,
       title: 'Очень длинное название задания',
       type: 'article',
       completed: false,
     },
     {
-      id: 1,
+      id: 3,
       title: 'Очень длинное название задания аж на 2 строчки аж на 2 строчки',
       type: 'practice',
       completed: false,
     },
     {
-      id: 3,
+      id: 4,
       title: 'Очень длинное название задания',
       type: 'video',
       completed: false,
     },
     {
-      id: 3,
+      id: 5,
       title: 'Очень длинное название задания',
       type: 'article',
       completed: false,
     },
     {
-      id: 2,
+      id: 6,
       title:
         'Очень длинное название зададлинное название задлинное название задлинное название задлинное название задлинное название задлинное название задлинное название задлинное название задлинное название задлинное название задлинное название зания',
       type: 'practice',
       completed: false,
     },
     {
-      id: 5,
+      id: 7,
       title:
         'Очее заданиязаданиязинное название задаинное название задзаданиязадания',
       type: 'article',
       completed: false,
     },
     {
-      id: 2,
+      id: 8,
       title: 'Очень длинное название задания',
       type: 'article',
       completed: false,
