@@ -1,8 +1,6 @@
-import React from 'react'
-
 import { Button } from '@/shared/Button'
 import CourseCard from '@/shared/UI/CourseCard'
-import { title } from 'process'
+import Link from 'next/link'
 
 const Courses = () => {
   const testArr = new Array(10).fill({
@@ -27,7 +25,7 @@ const Courses = () => {
         </ul>
         <div className="flex justify-center">
           <Button size={'lg'} className="w-[374px]">
-            В каталог
+            <Link href={'/catalog'}>В каталог</Link>
           </Button>
         </div>
       </div>
