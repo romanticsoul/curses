@@ -2,15 +2,12 @@
 import { tags } from '@/features/useSearch'
 import { useSearch } from '@/features/useSearch'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Button } from '@/shared/Button'
-
-const MotionButton = motion(Button)
 
 const Tags = () => {
-  const { tag, setTag } = useSearch()
+  const { tag, setTag, value, setValue } = useSearch()
   const tagsArray = Object.values(tags)
   return (
-    <div className="w-full  space-y-[50px] rounded-[16px] bg-background-tags p-[60px] ">
+    <div className=" space-y-[50px] rounded-[16px] bg-background-tags p-[60px] ">
       <h1 className="truncate text-[36px] font-[500] text-benefit md:text-[64px]">
         {tag}
       </h1>
@@ -31,7 +28,10 @@ const Tags = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               key={item}
-              onClick={() => setTag(item)}
+              onClick={() => {
+                setTag(item)
+                setValue(item)
+              }}
             >
               {item}
             </motion.button>
