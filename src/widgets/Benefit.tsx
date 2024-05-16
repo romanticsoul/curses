@@ -19,7 +19,7 @@ const Benefit = () => {
   ]
   return (
     <section className="flex items-center justify-center ">
-      <ul className="my-[94px] flex flex-wrap items-center justify-center gap-[85px]  p-1 max-[767px]:gap-[30px]">
+      <ul className="my-[94px] flex flex-wrap items-center justify-center gap-[85px]  p-1 max-[767px]:gap-[30px] ">
         {data.map((obj, key) => (
           <li key={key} className="flex flex-col items-center justify-center">
             <h2 className="text-[96px] font-bold text-benefit max-[1150px]:text-[70px] max-[767px]:text-[28px] max-[767px]:leading-7">
