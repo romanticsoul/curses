@@ -17,13 +17,19 @@ const TeamCard: React.FC<Props> = ({
   link = '#',
 }) => {
   return (
-    <div className="flex h-[600px] w-full max-w-[440px] flex-col bg-transparent  max-[767px]:max-h-[200px] max-[767px]:min-w-[140px]">
+    <div className="flex w-full max-w-[440px] flex-col bg-transparent  max-[767px]:max-h-[200px] max-[767px]:min-w-[140px]">
       <div className=" overflow-hidden max-[767px]:mb-[6px]">
         <div
           className={`relative aspect-square w-full overflow-hidden rounded-[32px] max-[767px]:rounded-[8px]`}
         >
           {imgURL ? (
-            <Image src={imgURL} alt="team" layout="fill" objectFit="cover" />
+            <Image
+              src={imgURL}
+              alt="team"
+              fill
+              priority
+              sizes="(100vw, 100vh)"
+            />
           ) : (
             <div className="flex size-full items-center justify-center bg-muted">
               <svg
@@ -40,11 +46,11 @@ const TeamCard: React.FC<Props> = ({
               </svg>
             </div>
           )}
-          <button className="absolute right-[20px] top-[20px] flex h-[32px] w-max items-center justify-center rounded-[8px] bg-white px-[16px] py-[10px] text-[14px] dark:bg-[#333333] dark:text-white max-[767px]:right-[6px] max-[767px]:top-[6px] max-[767px]:h-auto max-[767px]:px-[4px] max-[767px]:py-[2px] max-[767px]:text-[8px] max-[767px]:leading-[10px]">
+          <button className="absolute right-[20px] top-[20px] flex h-[32px] w-max items-center justify-center rounded-[8px] bg-background px-[16px] py-[10px] text-[14px] max-[767px]:right-[6px] max-[767px]:top-[6px] max-[767px]:h-auto max-[767px]:px-[4px] max-[767px]:py-[2px] max-[767px]:text-[8px] max-[767px]:leading-[10px]">
             {direction}
           </button>
         </div>
-        <h3 className="mt-[20px] text-[20px] text-secondary-foreground max-[767px]:mt-[4px] max-[767px]:text-[10px]">
+        <h3 className="mt-[20px] text-[20px] font-semibold text-secondary-foreground max-[767px]:mt-[4px] max-[767px]:text-[10px]">
           {name}
         </h3>
         <p className=" mt-[12px] w-full text-[16px] max-[767px]:mt-[3px] max-[767px]:text-[10px]">
@@ -52,10 +58,10 @@ const TeamCard: React.FC<Props> = ({
         </p>
       </div>
       <Link
-        className="flex items-center gap-2 text-muted-foreground max-[767px]:text-[8px]"
+        className="mt-10 flex items-center gap-2 text-muted-foreground max-[767px]:text-[8px]"
         href={link}
       >
-        <p className="">Подробнее </p>
+        <p>Подробнее</p>
         <span className="material-symbols-outlined text-sm">
           arrow_forward_ios
         </span>
