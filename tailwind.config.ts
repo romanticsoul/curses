@@ -37,13 +37,14 @@ const config = {
         secondary: {
           DEFAULT: 'var(--secondary)',
           foreground: 'var(--secondary-foreground)',
+          hover: 'var(--secondary-hover)',
         },
         destructive: {
           DEFAULT: 'var(--destructive)',
           foreground: 'var(--destructive-foreground)',
         },
         muted: {
-          DEFAULT: 'var(--muted))',
+          DEFAULT: 'var(--muted)',
           foreground: 'var(--muted-foreground)',
         },
         accent: {
@@ -62,6 +63,7 @@ const config = {
         input: {
           DEFAULT: 'var(--input)',
           hover: 'var(--input-hover)',
+          focus: 'var(--input-focus)',
         },
         benefit: {
           DEFAULT: 'var(--benefit)',

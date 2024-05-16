@@ -10,10 +10,10 @@ const CourseOverview = () => {
           <span className=" text-[16px] font-medium leading-[16px]">
             Даты проведения
           </span>
-          <h3 className="mb-[44px] mt-[22px] text-[96px] font-medium leading-[96px]">
+          <h2 className="mb-[44px] mt-[22px] text-[96px] font-medium leading-[96px] max-[736px]:text-[72px] max-[736px]:leading-[72px] max-[528px]:text-[48px] max-[528px]:leading-[48px]">
             Название курса
-          </h3>
-          <p className="mb-[84px] text-[36px] leading-[47px]">
+          </h2>
+          <p className="mb-[84px] text-[36px] leading-[47px] max-[736px]:text-[27px] max-[736px]:leading-[27px] max-[528px]:text-[18px]">
             Краткое описание того, что изучается на курсе и какие компетенции
             получит слушатель в процессе
           </p>
