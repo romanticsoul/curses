@@ -2,6 +2,7 @@
 
 import clsx from 'clsx'
 import { MouseEventHandler, useRef, useState } from 'react'
+import { Checkbox } from '../Checkbox'
 
 type ExerciseProps = {
   id: number
@@ -70,16 +71,16 @@ export const ExerciseLesson: React.FC<ExerciseProps> = ({
   return (
     <div
       className={clsx(
-        'relative flex cursor-pointer justify-between gap-4 px-4 py-2 pl-[calc(1rem+16px)] hover:bg-[#F5F5F5] dark:hover:bg-[#525252]',
-        active &&
-          ' before:absolute before:left-0 before:top-0 before:block before:h-full before:w-[16px] before:bg-[#E3E6FF] hover:before:bg-[#BCC3FF] dark:before:bg-[#E3E6FF] dark:hover:before:bg-[#BCC3FF]',
-        className
+        'relative flex h-11 items-center justify-between  gap-5 rounded border-2 pl-8 pr-2'
+        // active &&
+        // ' before:absolute before:left-0 before:top-0 before:block before:h-full before:w-[16px] before:bg-[#E3E6FF] hover:before:bg-[#BCC3FF] dark:before:bg-[#E3E6FF] dark:hover:before:bg-[#BCC3FF]',
+        // className
       )}
       onClick={(e) => handleChange(e)}
     >
       <div>
         {
-          <span className="material-symbols-outlined mt-1 inline-block text-2xl leading-6 text-muted-foreground">
+          <span className="material-symbols-outlined text-2xl text-muted-foreground">
             {setIcon(type)}
           </span>
         }
@@ -90,13 +91,7 @@ export const ExerciseLesson: React.FC<ExerciseProps> = ({
           <div className="mt-2 text-muted-foreground">{`${time} мин`}</div>
         )}
       </div>
-      <div className="mt-1">
-        <input
-          className="size-6 cursor-pointer"
-          ref={checkbox}
-          type="checkbox"
-        />
-      </div>
+      <Checkbox ref={checkbox} checked={completed} disabled />
     </div>
   )
 }
