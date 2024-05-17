@@ -61,7 +61,7 @@ export const ExerciseLesson: React.FC<ExerciseProps> = ({
     setActive(!active)
   }
 
-  const handleChange: MouseEventHandler<HTMLDivElement> = (e) => {
+  const handleChange: MouseEventHandler<HTMLAnchorElement> = (e) => {
     if (checkbox.current && e.target == checkbox.current) {
       changeCompleted()
     } else {
@@ -70,35 +70,36 @@ export const ExerciseLesson: React.FC<ExerciseProps> = ({
   }
 
   return (
-    <div
+    <Link
+      href={`/lesson/${id}`}
       className={clsx(
-        'relative flex  items-center justify-between  gap-5 rounded border-2 pl-8 pr-2',
-        // active &&
-        // ' before:absolute before:left-0 before:top-0 before:block before:h-full before:w-[16px] before:bg-[#E3E6FF] hover:before:bg-[#BCC3FF] dark:before:bg-[#E3E6FF] dark:hover:before:bg-[#BCC3FF]',
+        'relative flex justify-between  gap-5 rounded border-2 py-2 pl-8 pr-2',
+        active &&
+          ' before:absolute before:left-0 before:top-0 before:block before:h-full before:w-[16px] before:bg-[#E3E6FF] hover:before:bg-[#BCC3FF] dark:before:bg-[#E3E6FF] dark:hover:before:bg-[#BCC3FF]',
         className
       )}
       onClick={(e) => handleChange(e)}
     >
-      <Link
-        href={`/lesson/${id}`}
-        className="flex flex-row items-center gap-[20px] py-[12px]"
-      >
-        <div>
-          {
-            <span className="material-symbols-outlined text-2xl text-muted-foreground">
-              {setIcon(type)}
-            </span>
-          }
-        </div>
+      <div className="mt-1">
+        {
+          <span className="material-symbols-outlined text-2xl leading-6 text-muted-foreground">
+            {setIcon(type)}
+          </span>
+        }
+      </div>
 
-        <div className="flex grow flex-col justify-center">
-          <div className="leading-5">{`Задание ${id}. ${title}`}</div>
-          {time && (
-            <div className="mt-2 text-muted-foreground">{`${time} мин`}</div>
-          )}
-        </div>
-      </Link>
-      <Checkbox ref={checkbox} checked={completed} disabled />
-    </div>
+      <div className="flex grow flex-col justify-center">
+        <div className="leading-5">{`Задание ${id}. ${title}`}</div>
+        {time && (
+          <div className="mt-2 text-muted-foreground">{`${time} мин`}</div>
+        )}
+      </div>
+      <Checkbox
+        ref={checkbox}
+        checked={completed}
+        className="mt-1 shrink-0"
+        disabled
+      />
+    </Link>
   )
 }
