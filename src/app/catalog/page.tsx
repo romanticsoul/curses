@@ -60,9 +60,13 @@ const CatalogPage = async ({
           </p>
         )} */}
         <div className="flex flex-wrap gap-5">
-          {courses.map((item) => (
-            <CourseCard key={item.title} {...item} />
-          ))}
+          {courses.length !== 0 ? (
+            courses.map((item) => <CourseCard key={item.title} {...item} />)
+          ) : (
+            <h2 className="text-[32px]">
+              Ничего не найдено, попробуйте поменять теги или фильтры
+            </h2>
+          )}
         </div>
       </div>
     </div>
