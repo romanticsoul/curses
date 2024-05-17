@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Question } from '@/shared/UI/Question'
 
 const Questions = () => {

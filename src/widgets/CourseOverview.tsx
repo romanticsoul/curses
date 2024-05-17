@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Button } from '@/shared/Button'
 
-interface ICourse {
+export interface ICourse {
   id: number
   title: string
   description: string

@@ -17,7 +17,7 @@ const TeamCard: React.FC<Props> = ({
   link = '#',
 }) => {
   return (
-    <div className="flex w-full max-w-[440px] flex-col bg-transparent  max-[767px]:max-h-[200px] max-[767px]:min-w-[140px]">
+    <div className="flex w-full max-w-[440px] flex-col bg-transparent  max-[767px]:max-h-[200px] max-[767px]:max-w-[140px]">
       <div className=" overflow-hidden max-[767px]:mb-[6px]">
         <div
           className={`relative aspect-square w-full overflow-hidden rounded-[32px] max-[767px]:rounded-[8px]`}

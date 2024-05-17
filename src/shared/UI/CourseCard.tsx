@@ -5,11 +5,12 @@ import { useState } from 'react'
 import { Button } from '../Button'
 
 interface ICourseCard {
+  id: number
   title: string
   description: string
 }
 
-const CourseCard: React.FC<ICourseCard> = ({ title, description }) => {
+const CourseCard: React.FC<ICourseCard> = ({ id, title, description }) => {
   const [ButtonProp, setButtonProp] = useState('Выбрать')
 
   // const Change = () => {
@@ -18,12 +19,12 @@ const CourseCard: React.FC<ICourseCard> = ({ title, description }) => {
   // }
   return (
     <li className="relative h-[287px] max-w-[287px] list-none rounded-2xl border-2 border-secondary bg-card duration-500 before:absolute before:block before:size-full before:bg-[url('/background/cardLine.png')] before:bg-center before:bg-no-repeat hover:bg-card-hover">
-      <Link href={{ pathname: '/course', query: { title, description } }}>
+      <Link href={{ pathname: `/course/${id}` }}>
         <div className="relative box-border flex size-full flex-col justify-start p-[20px]">
           <h3 className="mb-[12px] box-border text-xl font-semibold leading-[20px] text-secondary-foreground">
             {title}
           </h3>
-          <p className=" mb-auto text-base font-normal leading-5">
+          <p className=" mb-auto text-[13px] font-normal leading-5">
             {description}
           </p>
           <div className=" flex flex-row gap-[16px] ">

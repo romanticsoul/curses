@@ -1,6 +1,7 @@
 'use client'
 
 import clsx from 'clsx'
+import Link from 'next/link'
 import { MouseEventHandler, useRef, useState } from 'react'
 import { Checkbox } from '../Checkbox'
 
@@ -71,26 +72,32 @@ export const ExerciseLesson: React.FC<ExerciseProps> = ({
   return (
     <div
       className={clsx(
-        'relative flex h-11 items-center justify-between  gap-5 rounded border-2 pl-8 pr-2'
+        'relative flex  items-center justify-between  gap-5 rounded border-2 pl-8 pr-2',
         // active &&
         // ' before:absolute before:left-0 before:top-0 before:block before:h-full before:w-[16px] before:bg-[#E3E6FF] hover:before:bg-[#BCC3FF] dark:before:bg-[#E3E6FF] dark:hover:before:bg-[#BCC3FF]',
-        // className
+        className
       )}
       onClick={(e) => handleChange(e)}
     >
-      <div>
-        {
-          <span className="material-symbols-outlined text-2xl text-muted-foreground">
-            {setIcon(type)}
-          </span>
-        }
-      </div>
-      <div className="flex grow flex-col justify-center">
-        <div className="leading-5">{`Задание ${id}. ${title}`}</div>
-        {time && (
-          <div className="mt-2 text-muted-foreground">{`${time} мин`}</div>
-        )}
-      </div>
+      <Link
+        href={`/lesson/${id}`}
+        className="flex flex-row items-center gap-[20px] py-[12px]"
+      >
+        <div>
+          {
+            <span className="material-symbols-outlined text-2xl text-muted-foreground">
+              {setIcon(type)}
+            </span>
+          }
+        </div>
+
+        <div className="flex grow flex-col justify-center">
+          <div className="leading-5">{`Задание ${id}. ${title}`}</div>
+          {time && (
+            <div className="mt-2 text-muted-foreground">{`${time} мин`}</div>
+          )}
+        </div>
+      </Link>
       <Checkbox ref={checkbox} checked={completed} disabled />
     </div>
   )

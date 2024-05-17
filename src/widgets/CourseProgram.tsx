@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { ExerciseLesson } from '@/shared/UI/Exercise'
 
 const CourseProgram = () => {
@@ -100,6 +98,7 @@ const CourseProgram = () => {
                       title={lesson.title}
                       type={'video'}
                       completed={lesson.completed}
+                      className="cursor-pointer"
                     />
                   </li>
                 ))}
