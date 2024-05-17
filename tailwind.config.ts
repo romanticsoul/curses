@@ -85,6 +85,11 @@ const config = {
   plugins: [
     ({ addUtilities }: PluginAPI) => {
       const newUtilities = {
+        '.container': {
+          'max-width': '1516px',
+          'padding-left': '15px',
+          'padding-right': '15px',
+        },
         '.main-title': {
           'font-weight': '500',
           'font-size': '96px',

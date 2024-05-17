@@ -78,8 +78,8 @@ const CourseProgram = () => {
   ]
 
   return (
-    <section className="m-auto max-w-[1516px] px-[15px] pb-[64px] pt-[62px]">
-      <h2 className="section-title mb-[44px]">Программа курса</h2>
+    <section className="container m-auto pb-[64px] pt-[62px]">
+      <h2 className="mb-[44px] text-benefit section-title">Программа курса</h2>
       <ul className="flex flex-col gap-[24px]">
         {testThemes.map((theme, index) => (
           <li key={theme.id}>
