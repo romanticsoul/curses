@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss'
 import { fontFamily } from 'tailwindcss/defaultTheme'
+import type { PluginAPI } from 'tailwindcss/types/config'
 
 const config = {
   darkMode: ['class'],
@@ -25,7 +26,10 @@ const config = {
       colors: {
         border: 'var(--border)',
         ring: 'var(--ring)',
-        background: 'var(--background)',
+        background: {
+          DEFAULT: 'var(--background)',
+          tags: 'var(--background-tags)',
+        },
         foreground: 'var(--foreground)',
         textGray: 'var(--accordion-text)',
         primary: {
@@ -78,6 +82,40 @@ const config = {
       },
     },
   },
+  plugins: [
+    ({ addUtilities }: PluginAPI) => {
+      const newUtilities = {
+        '.main-title': {
+          'font-weight': '500',
+          'font-size': '96px',
+          'line-height': '96px',
+          '@media (max-width: 736px)': {
+            'font-size': '72px',
+            'line-height': '72px',
+          },
+          '@media (max-width: 528px)': {
+            'font-size': '48px',
+            'line-height': '48px',
+          },
+        },
+        '.section-title': {
+          'text-align': 'center',
+          'font-weight': '500',
+          'font-size': '64px',
+          'line-height': '48px',
+          '@media (max-width: 736px)': {
+            'font-size': '48px',
+            'line-height': '48px',
+          },
+          '@media (max-width: 528px)': {
+            'font-size': '32px',
+            'line-height': '32px',
+          },
+        },
+      }
+      addUtilities(newUtilities)
+    },
+  ],
 } satisfies Config
 
 export default config

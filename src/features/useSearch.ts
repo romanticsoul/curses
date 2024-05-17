@@ -8,6 +8,11 @@ export enum tags {
   marketing = 'Маркетинг',
   business = 'Бизнес',
   finance = 'Финансы',
+  health = 'Здоровье',
+  education = 'Образование',
+  analytics = 'Аналитика',
+  hardware = 'Железо',
+  yoga = 'Йога',
 }
 
 interface IUseSearch {

@@ -33,9 +33,7 @@ const CourseOverview: React.FC<CourseOverviewProps> = async ({ courseId }) => {
           <span className=" text-[16px] font-medium leading-[16px]">
             Даты проведения
           </span>
-          <h2 className="mb-[44px] mt-[22px] text-[96px] font-medium leading-[96px] max-[736px]:text-[72px] max-[736px]:leading-[72px] max-[528px]:text-[48px] max-[528px]:leading-[48px]">
-            {course?.title}
-          </h2>
+          <h2 className="main-title mb-[44px] mt-[22px]">{course?.title}</h2>
           <p className="mb-[84px] text-[36px] leading-[47px] max-[736px]:text-[27px] max-[736px]:leading-[27px] max-[528px]:text-[18px]">
             {course?.description}
           </p>

@@ -16,7 +16,7 @@ const Courses = async () => {
   return (
     <section className="bg-secondary">
       <div className="m-auto max-w-[1516px] px-[15px] pb-[113px] pt-[44px] ">
-        <h2 className="pb-[48px] text-center text-[64px] font-medium leading-[64px] text-secondary-foreground max-[736px]:text-[48px] max-[736px]:leading-[48px] max-[528px]:text-[32px] max-[528px]:leading-[32px]">
+        <h2 className="section-title pb-[48px] text-secondary-foreground">
           Направления обучения
         </h2>
         <ul className="mb-[48px] grid grid-cols-5 gap-[20px] max-[1168px]:grid-cols-4 max-[938px]:grid-cols-3 max-[712px]:grid-cols-2 max-[478px]:grid-cols-1">

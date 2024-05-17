@@ -77,7 +77,7 @@ const socialNetworks = [
 
 const Footer = () => {
   return (
-    <div className="flex w-full flex-col gap-[30px] bg-[#333333] px-[48px] py-[30px]  text-[14px] text-[#C9C9C9] md:flex-row md:gap-[90px]">
+    <div className=" flex w-full flex-col gap-[30px] bg-[#333333] px-[48px] py-[30px]  text-[14px] text-[#C9C9C9] md:flex-row md:gap-[90px]">
       <div className="flex w-full max-w-[500px] items-center justify-between">
         <svg
           width="36"
