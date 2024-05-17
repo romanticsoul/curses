@@ -33,10 +33,8 @@ const SwiperBlock = () => {
   }, [])
 
   return (
-    <section className="relative px-[202px] pt-[44px] max-[1219px]:px-[120px] max-[1019px]:px-[100px] max-[767px]:px-[15px]">
-      <h2 className="mb-[48px] text-center text-[64px] font-medium text-benefit max-[1150px]:text-[70px] max-[767px]:text-[28px] max-[767px]:leading-7">
-        Преподаватели
-      </h2>
+    <section className="container relative px-[202px] pt-[44px] max-[1219px]:px-[120px] max-[1019px]:px-[100px] max-[767px]:px-[15px]">
+      <h2 className=" mb-[48px] text-benefit section-title ">Преподаватели</h2>
       <div
         className={cn(teachers.length < 3 ? 'hidden' : 'max-[767px]:hidden')}
       >
