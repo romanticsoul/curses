@@ -9,8 +9,8 @@ const CourseDetails = () => {
   })
 
   return (
-    <section className="m-auto max-w-[1516px] px-[15px] pb-[100px] pt-[44px]">
-      <h2 className="section-title mb-[48px]">Подробности</h2>
+    <section className="container m-auto pb-[100px] pt-[44px]">
+      <h2 className="mb-[48px] text-benefit section-title">Подробности</h2>
       <ul className="flex flex-col gap-[24px]">
         {testArr.map((item, index) => (
           <Question key={index} question={item.question} answer={item.answer} />
