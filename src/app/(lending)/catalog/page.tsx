@@ -5,7 +5,7 @@ import CourseCard from '@/shared/UI/CourseCard'
 // import { useSearch } from '@/features/useSearch'
 import { tags } from '@/features/useSearch'
 import Filter from '@/widgets/Filter'
-import type { Courses } from '../api/courses/route'
+import type { Courses } from '../../api/courses/route'
 
 const CatalogPage = async ({
   searchParams,

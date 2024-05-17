@@ -53,7 +53,7 @@ const Header = () => {
         <div className="flex items-center md:hidden">
           <MyEducationButton />
         </div>
-        <div className="hidden items-center md:flex">
+        <div className="hidden  flex-1 items-center md:flex md:justify-center">
           <SearchBar />
         </div>
         <div className="flex gap-7">

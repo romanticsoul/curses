@@ -6,9 +6,7 @@ import { ThemeProvider } from 'next-themes'
 
 import 'material-symbols'
 
-import Header from '@/widgets/Header/Header'
 import './globals.css'
-import Footer from '@/widgets/Footer'
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -39,9 +37,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
           {children}
-          <Footer />
         </ThemeProvider>
       </body>
     </html>

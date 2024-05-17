@@ -35,6 +35,7 @@ const SearchBar = () => {
     <div className="relative w-full min-w-[300px] max-w-[900px]">
       <Input
         name="search"
+        className="w-full"
         ref={inputRef}
         onFocus={handleInputFocus}
         placeholder="Найти курс..."

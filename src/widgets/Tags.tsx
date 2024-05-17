@@ -38,7 +38,7 @@ const Tags = () => {
   }
 
   return (
-    <div className=" space-y-[50px] rounded-[16px] bg-background-tags p-[60px] ">
+    <div className="space-y-[50px] rounded-[16px] bg-background-tags p-[60px] ">
       <h1 className="truncate text-[36px] font-[500] text-benefit md:text-[64px]">
         {tag}
       </h1>
