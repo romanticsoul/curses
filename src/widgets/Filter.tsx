@@ -1,6 +1,6 @@
 'use client'
 import FilterItem from '@/shared/FilterItem'
-import { useSearchParams, useRouter } from 'next/navigation'
+import { useSearchParams, useRouter, usePathname } from 'next/navigation'
 
 const filters = [
   {
@@ -49,16 +49,25 @@ const useQueryParams = (searchParams: URLSearchParams) => {
 
 const Filter = () => {
   const router = useRouter()
+  const pathname = usePathname()
   const searchParams = useSearchParams()
   const queryParams: { [key: string]: string[] } = useQueryParams(searchParams)
 
   const formAction = function (formData: FormData) {
-    const searchParams = new URLSearchParams()
+    const newSearchParams = new URLSearchParams(searchParams.toString())
+
+    filters.forEach(({ name }) => {
+      newSearchParams.delete(name)
+    })
+
     for (const [key, value] of formData.entries()) {
-      searchParams.append(key, value as string)
+      newSearchParams.append(key, value as string)
     }
-    const queryString = searchParams.toString()
-    router.replace(`?${queryString}`, { scroll: false })
+
+    const queryString = newSearchParams.toString()
+    router.push(pathname + '?' + queryString, {
+      scroll: false,
+    })
   }
 
   return (
