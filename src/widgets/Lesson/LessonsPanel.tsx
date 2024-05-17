@@ -10,7 +10,7 @@ const LessonsPanel = () => {
   })
 
   return (
-    <section className="h-screen w-[30%] overflow-y-scroll p-0">
+    <section className=" w-[22%] overflow-y-scroll p-0 max-[1550px]:w-[30%]">
       <div className=" block ">
         {data.map((d, key) => (
           <ExerciseLesson {...d} key={key} />
