@@ -2,10 +2,41 @@
 import { tags } from '@/features/useSearch'
 import { useSearch } from '@/features/useSearch'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useSearchParams, usePathname, useRouter } from 'next/navigation'
+import { useCallback } from 'react'
 
 const Tags = () => {
+  const router = useRouter()
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
   const { tag, setTag, value, setValue } = useSearch()
   const tagsArray = Object.values(tags)
+
+  const createQueryString = useCallback(
+    (name: string, value: string) => {
+      const params = new URLSearchParams(searchParams.toString())
+      params.set(name, value)
+      return params.toString()
+    },
+    [searchParams]
+  )
+
+  const handleClick = (item: tags[number]) => {
+    setTag(item)
+    setValue(item)
+    if (item === 'Все курсы') {
+      const newSearchParams = new URLSearchParams(searchParams.toString())
+      newSearchParams.delete('category')
+      router.push(pathname + '?' + newSearchParams.toString(), {
+        scroll: false,
+      })
+    } else {
+      router.push(pathname + '?' + createQueryString('category', item), {
+        scroll: false,
+      })
+    }
+  }
+
   return (
     <div className=" space-y-[50px] rounded-[16px] bg-background-tags p-[60px] ">
       <h1 className="truncate text-[36px] font-[500] text-benefit md:text-[64px]">
@@ -28,10 +59,7 @@ const Tags = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               key={item}
-              onClick={() => {
-                setTag(item)
-                setValue(item)
-              }}
+              onClick={() => handleClick(item)}
             >
               {item}
             </motion.button>
