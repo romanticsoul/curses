@@ -1,3 +1,6 @@
+import Footer from '@/widgets/Footer'
+import LessonHeader from '@/widgets/Header/LessonHeader'
+
 export default function LessonLayout({
   children,
 }: Readonly<{
@@ -5,9 +8,9 @@ export default function LessonLayout({
 }>) {
   return (
     <div>
-      {/* <Header /> */}
+      <LessonHeader />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }
