@@ -17,7 +17,7 @@ const SideMenu: React.FC<Props> = ({ isOpen, setIsOpen }) => {
           animate={{ x: 0 }}
           exit={{ x: -400 }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
-          className="fixed left-0 top-0 z-50 flex size-full max-w-[400px] flex-col items-center gap-4 bg-background p-[20px] text-[24px]  shadow-[0_0_10px_0_rgba(0,0,0,0.5)]"
+          className="fixed left-0 top-0 z-50 flex size-full max-w-[400px] flex-col items-center gap-4 overflow-y-auto bg-background p-[20px] text-[24px]  shadow-[0_0_10px_0_rgba(0,0,0,0.5)]"
         >
           <div className="flex w-full justify-end">
             <button

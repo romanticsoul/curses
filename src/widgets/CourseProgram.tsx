@@ -1,6 +1,10 @@
+'use client'
 import { ExerciseLesson } from '@/shared/UI/Exercise'
+import { useParams } from 'next/navigation'
 
 const CourseProgram = () => {
+  const { course_id } = useParams<{ course_id: string }>()
+
   const testThemes = [
     {
       id: 1,
@@ -92,7 +96,8 @@ const CourseProgram = () => {
                 .map((lesson) => (
                   <li key={lesson.id}>
                     <ExerciseLesson
-                      id={lesson.id}
+                      lessonId={lesson.id}
+                      courseId={Number(course_id)}
                       title={lesson.title}
                       type={'video'}
                       completed={lesson.completed}
