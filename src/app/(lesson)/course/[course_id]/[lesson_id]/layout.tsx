@@ -1,5 +1,5 @@
-import Footer from '@/widgets/Footer'
-import LessonHeader from '@/widgets/Header/LessonHeader'
+import { Footer } from '@/widgets/footer'
+import { LessonHeader } from '@/widgets/header'
 
 export default function LessonLayout({
   children,

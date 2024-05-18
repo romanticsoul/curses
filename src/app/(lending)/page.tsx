@@ -1,8 +1,8 @@
-import Benefit from '@/widgets/Benefit'
-import Courses from '@/widgets/Courses'
-import MainOverview from '@/widgets/MainOverview'
-import Questions from '@/widgets/Questions'
-import SwiperBlock from '@/widgets/SwiperBlock'
+import { Benefit } from '@/widgets/benefit'
+import { Courses } from '@/widgets/courses'
+import { MainOverview } from '@/widgets/main-overview'
+import { Questions } from '@/widgets/questions'
+import { SwiperBlock } from '@/widgets/swiper-block'
 
 export default function Home() {
   return (

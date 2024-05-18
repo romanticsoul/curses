@@ -1,7 +1,7 @@
-import Answer from '@/widgets/Lesson/Answer'
-import LessonMain from '@/widgets/Lesson/LessonMain'
-import LessonTitle from '@/widgets/Lesson/LessonTitle'
-import LessonsPanel from '@/widgets/Lesson/LessonsPanel'
+import { Answer } from '@/widgets/lesson'
+import { LessonMain } from '@/widgets/lesson'
+import { LessonTitle } from '@/widgets/lesson'
+import { LessonsPanel } from '@/widgets/lesson'
 
 const Page = ({ params: { lesson_id } }: { params: { lesson_id: string } }) => {
   return (
