@@ -1,8 +1,8 @@
-import CourseDetails from '@/widgets/CourseDetails'
-import CourseOverview from '@/widgets/CourseOverview'
-import CourseProgram from '@/widgets/CourseProgram'
-import Progress from '@/widgets/Progress'
-import SwiperBlock from '@/widgets/SwiperBlock'
+import { CourseDetails } from '@/widgets/course-details'
+import { CourseOverview } from '@/widgets/course-overview'
+import { CourseProgram } from '@/widgets/course-program'
+import { Progress } from '@/widgets/progress'
+import { SwiperBlock } from '@/widgets/swiper-block'
 
 const CoursePage = ({
   params: { course_id },

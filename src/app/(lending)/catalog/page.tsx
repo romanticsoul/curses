@@ -1,6 +1,6 @@
-import Tags from '@/widgets/Tags'
-import CourseCard from '@/shared/UI/CourseCard'
-import Filter from '@/widgets/Filter'
+import { Tags } from '@/widgets/tags'
+import { CourseCard } from '@/entities/course-card'
+import { Filter } from '@/widgets/filter'
 import type { Courses } from '../../api/courses/route'
 
 const CatalogPage = async ({

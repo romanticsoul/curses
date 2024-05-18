@@ -1,5 +1,5 @@
-import Header from '@/widgets/Header/Header'
-import Footer from '@/widgets/Footer'
+import Header from '@/widgets/header/ui/Header'
+import { Footer } from '@/widgets/footer'
 
 export default function RootLayout({
   children,

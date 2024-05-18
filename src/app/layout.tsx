@@ -1,11 +1,10 @@
-import { cn } from '@/lib/utils'
-import type { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
-
 import { ThemeProvider } from 'next-themes'
 
-import 'material-symbols'
+import { cn } from '@/lib/utils'
+import type { Metadata } from 'next'
 
+import 'material-symbols'
 import './globals.css'
 
 const fontSans = FontSans({
