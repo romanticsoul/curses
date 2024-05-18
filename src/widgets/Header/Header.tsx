@@ -1,11 +1,10 @@
-'use client'
 import ToggleThemeButton from '@/shared/ToggleThemeButton'
 import MyEducationButton from '@/shared/UI/MyEducationButton'
 import SearchBar from '@/shared/UI/Search/SearchBar'
 import Link from 'next/link'
 import React from 'react'
-import SideMenu from './SideMenu'
 import { Button } from '@/shared/Button'
+import SideMenuButton from '../SideMenuButton'
 
 export const links = [
   {
@@ -23,18 +22,10 @@ export const links = [
 ]
 
 const Header = () => {
-  const [isOpen, setIsOpen] = React.useState(false)
   return (
     <header className="z-20 my-6 flex w-full flex-col gap-4 bg-transparent  px-12">
       <div className="flex h-full items-center justify-between  gap-12">
-        <Button
-          variant="transparent"
-          aspect="square"
-          onClick={() => setIsOpen(true)}
-          className="lg:hidden"
-        >
-          <span className="material-symbols-outlined">Menu</span>
-        </Button>
+        <SideMenuButton />
 
         <div className="hidden gap-8 lg:flex">
           <Link href="/" className="text-[16px] font-[500] text-foreground ">
@@ -86,7 +77,6 @@ const Header = () => {
       <div className=" block md:hidden">
         <SearchBar />
       </div>
-      <SideMenu isOpen={isOpen} setIsOpen={setIsOpen} />
     </header>
   )
 }

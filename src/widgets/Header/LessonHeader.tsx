@@ -1,12 +1,11 @@
-'use client'
 import ToggleThemeButton from '@/shared/ToggleThemeButton'
 import MyEducationButton from '@/shared/UI/MyEducationButton'
-import SearchBar from '@/shared/UI/Search/SearchBar'
 import Link from 'next/link'
 import React from 'react'
-import SideMenu from './SideMenu'
 import { Button } from '@/shared/Button'
 import BreadCrumb from '@/shared/BreadCrumb'
+import { ICourse } from '@/app/api/course/route'
+import SideMenuButton from '@/widgets/SideMenuButton'
 
 export const links = [
   {
@@ -23,35 +22,32 @@ export const links = [
   },
 ]
 
-const lessonLinks = [
-  {
-    name: 'курс 1',
-    href: '#',
-  },
-  {
-    name: 'урок 2',
-    href: '#',
-  },
-  {
-    name: 'тема 3',
-    href: '#',
-  },
-]
+type LessonHeaderProps = {
+  courseId: ICourse['id']
+  lessonId: number
+}
 
-const Header = () => {
-  const [isOpen, setIsOpen] = React.useState(false)
+const LessonHeader = async (props: LessonHeaderProps) => {
+  const response = await fetch(
+    `http://localhost:3000/api/course?course_id=${props.courseId}`
+  )
+  const course: ICourse = await response.json()
+
+  const lessonLinks = [
+    {
+      name: course.title,
+      href: `/course/${props.courseId}`,
+    },
+    {
+      name: `Урок № ${props.lessonId}`,
+      href: `/course/${props.courseId}/${props.lessonId}`,
+    },
+  ]
+
   return (
     <header className="z-20 my-6 flex w-full flex-col gap-4 bg-transparent  px-12">
       <div className="flex h-full items-center justify-between  gap-12">
-        <Button
-          variant="transparent"
-          aspect="square"
-          onClick={() => setIsOpen(true)}
-          className="lg:hidden"
-        >
-          <span className="material-symbols-outlined">Menu</span>
-        </Button>
-
+        <SideMenuButton />
         <div className="hidden gap-8 lg:flex">
           <Link href="/" className="text-[16px] font-[500] text-foreground ">
             logo
@@ -93,9 +89,8 @@ const Header = () => {
       <div className=" mx-auto block md:hidden">
         <BreadCrumb items={lessonLinks} />
       </div>
-      <SideMenu isOpen={isOpen} setIsOpen={setIsOpen} />
     </header>
   )
 }
 
-export default Header
+export default LessonHeader
