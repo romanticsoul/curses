@@ -1,11 +1,11 @@
 'use client'
+import { cn } from '@/lib/utils'
+import { Button } from '@/shared/Button'
 import TeamCard from '@/shared/UI/TeamCard'
 import { useEffect, useRef, useState } from 'react'
-import { Button } from '@/shared/Button'
 import 'swiper/css'
 import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { cn } from '@/lib/utils'
 
 type Teacher = {
   id: number
@@ -33,10 +33,10 @@ const SwiperBlock = () => {
   }, [])
 
   return (
-    <section className="container relative px-[202px] pt-[44px] max-[1219px]:px-[120px] max-[1019px]:px-[100px] max-[767px]:px-[15px]">
+    <section className="container relative px-[15px] pt-[44px]  md:px-[100px]  lg:px-[120px] xl:px-[202px]">
       <h2 className=" mb-[48px] text-benefit section-title ">Преподаватели</h2>
       <div
-        className={cn(teachers.length < 3 ? 'hidden' : 'max-[767px]:hidden')}
+        className={cn(teachers.length < 3 ? 'md:hidden' : 'hidden md:block')}
       >
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -87,8 +87,8 @@ const SwiperBlock = () => {
       <ul
         className={
           teachers.length < 3
-            ? 'flex flex-wrap items-center justify-center gap-[20px] max-[767px]:flex max-[767px]:gap-[10px]'
-            : 'hidden flex-wrap items-center justify-center max-[767px]:flex max-[767px]:gap-[10px]'
+            ? 'flex flex-wrap items-center justify-center gap-[10px] md:gap-[20px]'
+            : 'flex flex-wrap items-center justify-center gap-[10px] md:hidden md:gap-0'
         }
       >
         {teachers.map((d, key) => (

@@ -19,16 +19,16 @@ const Benefit = () => {
   ]
   return (
     <section className="flex items-center justify-center ">
-      <ul className="my-[94px] flex flex-wrap items-center justify-center gap-[85px]  p-1 max-[767px]:gap-[30px]">
+      <ul className="my-3 flex flex-wrap items-center justify-center gap-[30px] p-1  md:my-[94px]  md:gap-[85px]">
         {data.map((obj, key) => (
           <li key={key} className="flex flex-col items-center justify-center">
-            <h2 className="text-[96px] font-bold text-benefit max-[1150px]:text-[70px] max-[767px]:text-[28px] max-[767px]:leading-7">
+            <h2 className="text-[28px] font-bold leading-7 text-benefit md:text-[70px] md:leading-normal  lg:text-[96px]">
               {obj.figure}
             </h2>
-            <p className="mb-[44px]  text-[32px] font-medium text-foreground max-[1150px]:text-[24px] max-[767px]:mb-[15px] max-[767px]:text-[16px]">
+            <p className="mb-[15px]  text-[16px] font-medium text-foreground md:mb-[44px] md:text-[24px] lg:text-[32px]">
               {obj.who}
             </p>
-            <p className="w-[376px] text-center text-xl font-medium text-muted-foreground max-[1150px]:w-[270px] max-[1150px]:text-[20px] max-[767px]:w-[140px] max-[767px]:text-[10px] max-[767px]:leading-3">
+            <p className="w-[140px] text-center text-[10px] text-xl font-medium leading-3 text-muted-foreground md:w-[270px] md:text-[20px] md:leading-normal lg:w-[376px]">
               {obj.description}
             </p>
           </li>

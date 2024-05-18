@@ -83,7 +83,7 @@ const CourseProgram = () => {
       <ul className="flex flex-col gap-[24px]">
         {testThemes.map((theme, index) => (
           <li key={theme.id}>
-            <h3 className="mb-[18px] ml-[64px]  text-[32px] font-medium leading-[32px] max-[736px]:text-[24px] max-[736px]:leading-[24px]">
+            <h3 className="mb-[18px] ml-[64px]  text-[24px] font-medium leading-[24px] md:text-[32px] md:leading-[32px]">
               Тема №{theme.id}. {theme.title}
             </h3>
             <ul>

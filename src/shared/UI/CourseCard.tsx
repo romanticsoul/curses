@@ -13,11 +13,6 @@ interface ICourseCard {
 const CourseCard: React.FC<ICourseCard> = ({ id, title, description }) => {
   const [ButtonProp, setButtonProp] = useState('Выбрать')
 
-  // const Change = () => {
-
-  //   setButtonProp('Вы участник')
-  // }
-
   return (
     <li className="relative h-[287px] max-w-[287px] list-none rounded-2xl border-2 border-secondary bg-card duration-500 before:absolute before:block before:size-full before:bg-[url('/background/cardLine.png')] before:bg-center before:bg-no-repeat hover:bg-card-hover">
       <Link href={{ pathname: `/course/${id}` }}>
