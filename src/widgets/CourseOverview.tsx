@@ -41,7 +41,6 @@ const CourseOverview: React.FC<CourseOverviewProps> = async ({ courseId }) => {
           </p>
           <Button
             size={'xl'}
-            variant={'transparent'}
             className="h-[31px] self-center rounded-sm bg-[#2C41FF] text-[12px] text-white md:h-[88px] md:rounded-lg md:px-[133px] md:text-[36px]"
           >
             Продолжить курс
