@@ -15,11 +15,11 @@ const Courses = async () => {
 
   return (
     <section className="bg-secondary">
-      <div className="container m-auto pb-[113px] pt-[44px] ">
+      <div className="container m-auto content-center pb-[113px] pt-[44px]">
         <h2 className="pb-[48px] text-benefit section-title">
           Направления обучения
         </h2>
-        <ul className="mb-[48px] grid grid-cols-5 gap-[20px] max-[1168px]:grid-cols-4 max-[938px]:grid-cols-3 max-[712px]:grid-cols-2 max-[478px]:grid-cols-1">
+        <ul className="mb-[48px] grid grid-cols-1 gap-[20px] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {courses
             ?.slice(0, 10)
             .map((item, index) => (

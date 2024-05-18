@@ -29,20 +29,22 @@ export const Question: React.FC<QuestionProps> = (props) => {
     <li className={clsx('list-none', className)}>
       <button
         onClick={handleClick}
-        className="flex w-full items-center justify-between gap-2 rounded-lg bg-secondary px-4 py-2 text-3xl leading-8"
+        className="flex w-full items-center justify-between gap-2 rounded-lg bg-secondary px-4 py-2 text-xl leading-8  md:text-3xl"
       >
         <span>{question}</span>
         {isOpen ? (
-          <span className="material-symbols-outlined text-3xl">
+          <span className="material-symbols-outlined text-xl md:text-3xl">
             keyboard_control_key
           </span>
         ) : (
-          <span className="material-symbols-outlined text-3xl">add</span>
+          <span className="material-symbols-outlined text-xl md:text-3xl">
+            add
+          </span>
         )}
       </button>
       <p
         className={clsx(
-          'box-content max-h-0 overflow-hidden p-0 text-2xl opacity-0 transition-all',
+          'box-content max-h-0 overflow-hidden p-0 text-lg opacity-0 transition-all md:text-2xl',
           isOpen && 'px-4 py-2 text-textGray opacity-100'
         )}
         ref={accordion}

@@ -17,10 +17,10 @@ const TeamCard: React.FC<Props> = ({
   link = '#',
 }) => {
   return (
-    <div className="flex w-full max-w-[440px] flex-col bg-transparent  max-[767px]:max-h-[200px] max-[767px]:max-w-[140px]">
-      <div className=" overflow-hidden max-[767px]:mb-[6px]">
+    <div className="flex  h-auto w-full max-w-[140px]  flex-col bg-transparent md:max-w-[440px]">
+      <div className=" mb-[6px] overflow-hidden md:mb-0">
         <div
-          className={`relative aspect-square w-full overflow-hidden rounded-[32px] max-[767px]:rounded-[8px]`}
+          className={`relative aspect-square w-full overflow-hidden rounded-[8px]  md:rounded-[32px]`}
         >
           {imgURL ? (
             <Image
@@ -46,19 +46,19 @@ const TeamCard: React.FC<Props> = ({
               </svg>
             </div>
           )}
-          <button className="absolute right-[20px] top-[20px] flex h-[32px] w-max items-center justify-center rounded-[8px] bg-background px-[16px] py-[10px] text-[14px] max-[767px]:right-[6px] max-[767px]:top-[6px] max-[767px]:h-auto max-[767px]:px-[4px] max-[767px]:py-[2px] max-[767px]:text-[8px] max-[767px]:leading-[10px]">
+          <button className="absolute right-[6px] top-[6px] flex h-auto w-max items-center justify-center rounded-[8px] bg-background px-[4px] py-[2px] text-[8px] leading-[10px] lg:right-[20px] lg:top-[20px] lg:h-[32px] lg:px-[16px]  lg:py-[10px] lg:text-[14px]">
             {direction}
           </button>
         </div>
-        <h3 className="mt-[20px] text-[20px] font-semibold text-secondary-foreground max-[767px]:mt-[4px] max-[767px]:text-[10px]">
+        <h3 className="mt-[4px] text-[10px] font-semibold text-secondary-foreground md:mt-[20px] md:text-[20px]">
           {name}
         </h3>
-        <p className=" mt-[12px] w-full text-[16px] max-[767px]:mt-[3px] max-[767px]:text-[10px]">
+        <p className=" mt-[3px] w-full text-[8px] md:mt-[10px] md:text-[14px]">
           {description}
         </p>
       </div>
       <Link
-        className="mt-10 flex items-center gap-2 text-muted-foreground max-[767px]:text-[8px]"
+        className="flex items-center gap-2 text-[8px] text-muted-foreground md:text-[12px]"
         href={link}
       >
         <p>Подробнее</p>

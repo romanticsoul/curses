@@ -70,36 +70,38 @@ export const ExerciseLesson: React.FC<ExerciseProps> = ({
   }
 
   return (
-    <Link
-      href={`/lesson/${id}`}
-      className={clsx(
-        'relative flex justify-between  gap-5 rounded border-2 py-2 pl-8 pr-2',
-        active &&
-          ' before:absolute before:left-0 before:top-0 before:block before:h-full before:w-[16px] before:bg-[#E3E6FF] hover:before:bg-[#BCC3FF] dark:before:bg-[#E3E6FF] dark:hover:before:bg-[#BCC3FF]',
-        className
-      )}
-      onClick={(e) => handleChange(e)}
-    >
-      <div className="mt-1">
-        {
-          <span className="material-symbols-outlined text-2xl leading-6 text-muted-foreground">
-            {setIcon(type)}
-          </span>
-        }
-      </div>
-
-      <div className="flex grow flex-col justify-center">
-        <div className="leading-5">{`Задание ${id}. ${title}`}</div>
-        {time && (
-          <div className="mt-2 text-muted-foreground">{`${time} мин`}</div>
+    <li className="list-none">
+      <Link
+        href={`/lesson/${id}`}
+        className={clsx(
+          'relative flex justify-between  gap-5 rounded border-2 py-2 pl-8 pr-2',
+          active &&
+            ' before:absolute before:left-0 before:top-0 before:block before:h-full before:w-[16px] before:bg-[#E3E6FF] hover:before:bg-[#BCC3FF] dark:before:bg-[#E3E6FF] dark:hover:before:bg-[#BCC3FF]',
+          className
         )}
-      </div>
-      <Checkbox
-        ref={checkbox}
-        checked={completed}
-        className="mt-1 shrink-0"
-        disabled
-      />
-    </Link>
+        onClick={(e) => handleChange(e)}
+      >
+        <div className="mt-1">
+          {
+            <span className="material-symbols-outlined text-2xl leading-6 text-muted-foreground">
+              {setIcon(type)}
+            </span>
+          }
+        </div>
+
+        <div className="flex grow flex-col justify-center">
+          <div className="leading-5">{`Задание ${id}. ${title}`}</div>
+          {time && (
+            <div className="mt-2 text-muted-foreground">{`${time} мин`}</div>
+          )}
+        </div>
+        <Checkbox
+          ref={checkbox}
+          checked={completed}
+          className="mt-1 shrink-0"
+          disabled
+        />
+      </Link>
+    </li>
   )
 }

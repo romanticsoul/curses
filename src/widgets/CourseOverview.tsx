@@ -28,16 +28,24 @@ const CourseOverview: React.FC<CourseOverviewProps> = async ({ courseId }) => {
 
   return (
     <section className="bg-[url('/assets/course-overview.png')] bg-cover bg-center bg-no-repeat text-white">
-      <div className="container m-auto pb-[197px] pt-[102px]">
-        <div className="max-w-[748px]">
+      <div className="container m-auto pb-[23px] pt-[102px] md:pb-[197px]">
+        <div className="items-left flex  max-w-[748px] flex-col md:block">
           <span className=" text-[16px] font-medium leading-[16px]">
             Даты проведения
           </span>
-          <h2 className="mb-[44px] mt-[22px] main-title">{course?.title}</h2>
-          <p className="mb-[84px] text-[36px] leading-[47px] max-[736px]:text-[27px] max-[736px]:leading-[27px] max-[528px]:text-[18px]">
+          <h2 className="mb-[12px] text-[28px] leading-[36px]  md:mb-[44px] md:text-[96px] md:main-title">
+            {course?.title}
+          </h2>
+          <p className="mb-[40px] text-[36px] leading-[47px] max-[736px]:text-[27px]  max-[736px]:leading-[27px] max-[528px]:text-[18px] md:mb-[84px] ">
             {course?.description}
           </p>
-          <Button size={'xl'}>Продолжить курс</Button>
+          <Button
+            size={'xl'}
+            variant={'transparent'}
+            className="h-[31px] self-center rounded-sm bg-[#2C41FF] text-[12px] text-white md:h-[88px] md:rounded-lg md:px-[133px] md:text-[36px]"
+          >
+            Продолжить курс
+          </Button>
         </div>
       </div>
     </section>

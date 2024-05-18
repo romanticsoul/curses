@@ -2,11 +2,11 @@ import { Button } from '@/shared/Button'
 import { Input } from '@/shared/Input'
 const Answer = () => {
   return (
-    <section className="mt-[58px]">
+    <div className="mt-[58px]">
       <h3 className="mb-[14px] text-[16px] font-normal text-foreground">
         Ответ
       </h3>
-      <div className="grid grid-cols-[1fr_200px] gap-[20px] max-[440px]:grid-cols-none max-[440px]:grid-rows-[1fr_200px]">
+      <div className="grid grid-rows-[1fr_auto] gap-[20px] sm:grid-cols-[1fr_auto]">
         <Input placeholder="Введите ваш ответ..." />
         <Button
           type={'button'}
@@ -16,7 +16,7 @@ const Answer = () => {
           Отправить
         </Button>
       </div>
-    </section>
+    </div>
   )
 }
 
