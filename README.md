@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Сайт с курсами
 
-## Getting Started
+## Описание проекта
 
-First, run the development server:
+Это веб-приложение образовательного сервиса, на котором пользователь может искать подходящие для себя онлайн курсы и изучить их программу.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Цель задания
+
+Основной целью данного задания является отработка следующих навыков:
+
+- Работа в команде: Для фронтенд разработчика важно умение эффективно сотрудничать с другими членами команды. Это включает в себя понимание своей роли в проекте, умение слушать и взаимодействовать с другими разработчиками, анализировать и обсуждать требования и предложения, а также участвовать в обсуждении и принятии решений, касающихся фронтенд-части проекта.
+
+- Работа с гит: Гит является одним из основных инструментов для управления версиями кода в современной веб-разработке. Фронтенд разработчику важно уметь использовать гит для управления исходным кодом проекта, включая коммиты, ветвление, слияния и разрешение конфликтов. Это также включает в себя умение работать с ветками, создавать пулл-реквесты и рецензировать код других членов команды.
+
+- Взаимодействие с дизайнером проекта: Фронтенд разработчику часто приходится работать непосредственно с дизайнерами проекта для реализации дизайн-макетов в коде. Это требует умения понимать дизайнерские концепции и принципы, эффективно коммуницировать с дизайнером для выяснения требований и уточнения деталей, а также способность быстро и точно реализовывать дизайн-макеты с использованием HTML, CSS и других средств.
+
+- Реализация темной темы: В современном веб-дизайне часто требуется создание альтернативных тем оформления, таких как темная тема. Фронтенд разработчику важно уметь реализовывать такие темы, используя соответствующие технологии и методы, чтобы обеспечить хорошую читаемость и удобство использования для пользователей, которые предпочитают темный интерфейс. Это может включать в себя изменение цветовой палитры, настройку стилей элементов интерфейса и обеспечение совместимости с различными устройствами и браузерами.
+
+## Ресурсы
+
+- Макет примерного проекта доступен по ссылке: [Figma](<https://www.figma.com/design/rjYuFVCaPaAJsoNV6oJ9lL/3-%D0%9F%D0%BE%D1%82%D0%BE%D0%BA.-%D0%90%D0%90.-%D0%97%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F-UI%2FUX-(%D0%9C%D0%BE%D0%BA%D1%80%D1%83%D1%88%D0%B8%D0%BD%D0%B0-%D0%A1%D0%BE%D1%84%D1%8C%D1%8F)?node-id=2158-1187>)
+
+- Для имитации запросов и формирования заглушек используется: сервер на Next.js
+
+## Запуск проекта
+
+```
+Установить зависимости: npm install
+
+Запустить frontend: npm run dev
+
+Открыть приложение в браузере: http://localhost:3000
+
+Используемая версия Node - v20.9.0
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+В этом проекте используется [`next/font`](https://extjs.org/docs/basic-features/font-optimization) для автоматической оптимизации и загрузки пользовательского шрифта Google Inter.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Скрипты
 
-## Learn More
+- `npm run dev` - Запуск Next.js в режиме разработки
+- `npm run start` - Запуск Next.js в рабочем режиме
+- `npm run build` - Сборка
 
-To learn more about Next.js, take a look at the following resources:
+## Архитектура проекта
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Проект написан в соответствии с методологией Feature sliced design.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Ссылка на документацию - [feature sliced design](https://feature-sliced.design/docs/get-started/tutorial)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Линтинг
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+В проекте используется prettier для проверки кода.
+
+## Адаптив
+
+Для корректного отображения на различных разрешениях используются медиа-запросы, которые поддерживают разрешения:
+1920px, 1024px, 375px, а также все промежуточные значения.
+
+## Конфигурация проекта
+
+Для разработки проект использует сборщик Turbopack
+
+## Участники
+
+### Гайкалов Данил
+
+Задачи:
+
+-
+-
+-
+-
+-
+
+### Карцев Денис
+
+Задачи:
+
+-
+-
+-
+-
+-
+
+### Ярлыкова Юлия
+
+Задачи:
+
+-
+-
+-
+-
+-
+
+### Шефер Никита
+
+Задачи:
+
+-
+-
+-
+-
+-
+
+### Айнур
+
+Задачи:
+
+-
+-
+-
+-
+-
