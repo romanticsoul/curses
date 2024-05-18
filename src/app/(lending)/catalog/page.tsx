@@ -41,13 +41,20 @@ const CatalogPage = async ({
         <Filter />
       </div>
       <div className="col-start-2 my-[30px] space-y-8 ">
+        {courses.length !== 0 ? (
+          <span className="text-[16px] leading-[16px]">
+            Найдено по запросу «{courses[0].categories}»: {courses.length}
+          </span>
+        ) : (
+          <></>
+        )}
         <div className="flex flex-wrap gap-5">
           {courses.length !== 0 ? (
             courses.map((item) => <CourseCard key={item.title} {...item} />)
           ) : (
-            <h2 className="text-[32px]">
+            <span className="text-[16px] leading-[16px]">
               Ничего не найдено, попробуйте поменять теги или фильтры
-            </h2>
+            </span>
           )}
         </div>
       </div>
